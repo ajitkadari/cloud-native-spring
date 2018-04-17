@@ -1,0 +1,20 @@
+endpoints: # add this section
+  sensitive: false
+info: # add this section
+  build:
+    artifact: @project.artifactId@
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: info,health,metrics
+    prometheus:
+      enabled: true
+security:
+  basic:
+    enabled: false
