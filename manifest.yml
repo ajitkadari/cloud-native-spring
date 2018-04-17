@@ -2,8 +2,10 @@
 applications:
 - name: cloud-native-spring
   random-route: true
-  memory: 768M
-  path: target/cloud-native-spring-0.0.1-SNAPSHOT.jar
+  memory: 1G
+  instances: 1
+  path: target/cloud-native-spring-0.0.1-SNAPSHOT-exec.jar
   timeout: 180 # to give time for the data to import
+  buildpack: java_buildpack
   env:
     JAVA_OPTS: -Djava.security.egd=file:///dev/urandom

@@ -1,9 +1,8 @@
-package io.pivotal.cloudnativespring;
+package io.pivotal;
 
-import io.micrometer.core.instrument.binder.jvm.JvmThreadMetrics;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
@@ -25,8 +24,4 @@ public class CloudNativeSpringApplication {
 		return "Hello World!";
 	}
 
-	@Bean
-	JvmThreadMetrics threadMetrics(){
-		return new JvmThreadMetrics();
-	}
 }

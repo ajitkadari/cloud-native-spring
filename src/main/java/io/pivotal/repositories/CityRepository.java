@@ -1,6 +1,6 @@
-package io.pivotal.cloudnativespring.io.pivotal.cloudnativespring.repositories;
+package io.pivotal.repositories;
 
-import io.pivotal.cloudnativespring.io.pivotal.cloudnativespring.domain.City;
+import io.pivotal.domain.City;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.PagingAndSortingRepository;

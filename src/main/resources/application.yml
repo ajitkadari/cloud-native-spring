@@ -1,20 +1,31 @@
+spring:
+  application:
+    name: cloud-native-spring
+
 endpoints: # add this section
   sensitive: false
+
 info: # add this section
   build:
     artifact: @project.artifactId@
     name: @project.name@
     description: @project.description@
     version: @project.version@
+
 management:
   security:
     enabled: false
+  info:
+    git:
+      mode: full
   endpoints:
     web:
       exposure:
         include: info,health,metrics
-    prometheus:
-      enabled: true
+  cloudfoundry:
+    enabled: true
+    skip-ssl-validation: false
+
 security:
   basic:
     enabled: false

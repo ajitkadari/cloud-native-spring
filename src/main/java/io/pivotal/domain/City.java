@@ -1,4 +1,4 @@
-package io.pivotal.cloudnativespring.io.pivotal.cloudnativespring.domain;
+package io.pivotal.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
